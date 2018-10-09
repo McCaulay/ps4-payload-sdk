@@ -7,6 +7,8 @@
 
 #define AF_INET 0x0002
 
+#define INET_ADDRSTRLEN 16
+
 #define IN_ADDR_ANY 0
 
 #define SOCK_STREAM 1
