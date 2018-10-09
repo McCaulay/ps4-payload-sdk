@@ -54,15 +54,11 @@ extern int (*setgid)(int gid);
 extern int (*setreuid)(int ruid, int euid);
 extern int (*setregid)(int rgid, int egid);
 
-extern int (*ptrace)(int request, int pid, void *addr, int data);
-
-extern int (*fork)();
-
-extern int (*wait)(int *status);
-extern int (*waitpid)(int pid, int *status, int options);
+extern int (*wait)();
 
 int kill(int pid, int signum);
+int kexec(void* func, void* user_arg);
+int ptrace(int request, int pid, void *addr, int data);
+int wait4(int pid, int *status, int options, void *rusage);
 
 void initKernel(void);
-
-int kexec(void* func, void* user_arg);
