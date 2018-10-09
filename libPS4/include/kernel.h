@@ -54,6 +54,13 @@ extern int (*setgid)(int gid);
 extern int (*setreuid)(int ruid, int euid);
 extern int (*setregid)(int rgid, int egid);
 
+extern int (*ptrace)(int request, int pid, void *addr, int data);
+
+extern int (*fork)();
+
+extern int (*wait)(int *status);
+extern int (*waitpid)(int pid, int *status, int options);
+
 int kill(int pid, int signum);
 
 void initKernel(void);

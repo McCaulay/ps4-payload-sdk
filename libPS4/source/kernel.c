@@ -50,6 +50,13 @@ int (*setgid)(int gid);
 int (*setreuid)(int ruid, int euid);
 int (*setregid)(int rgid, int egid);
 
+int (*ptrace)(int request, int pid, void *addr, int data);
+
+int (*fork)();
+
+int (*wait)(int *status);
+int (*waitpid)(int pid, int *status, int options);
+
 SYSCALL(kill, 37);
 SYSCALL(ioctl, 54);
 
@@ -106,4 +113,11 @@ void initKernel(void) {
 	RESOLVE(libKernelHandle, setgid);
 	RESOLVE(libKernelHandle, setreuid);
 	RESOLVE(libKernelHandle, setregid);
+
+	RESOLVE(libKernelHandle, ptrace);
+
+	RESOLVE(libKernelHandle, fork);
+
+	RESOLVE(libKernelHandle, wait);
+	RESOLVE(libKernelHandle, waitpid);
 }
