@@ -21,3 +21,5 @@
 #include "graphics.h"
 #include "jit.h"
 #include "sysutil.h"
+#include "ptrace.h"
+#include "sysctl.h"
