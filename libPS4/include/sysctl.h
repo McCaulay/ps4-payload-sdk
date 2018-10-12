@@ -205,6 +205,10 @@
 
 #define	CTL_P1003_1B_MAXID		26
 
+#define KVME_PROT_READ    0x00000001
+#define KVME_PROT_WRITE   0x00000002
+#define KVME_PROT_EXEC    0x00000004
+
 /*
  * Struct:  kinfo_vmentry
  */
