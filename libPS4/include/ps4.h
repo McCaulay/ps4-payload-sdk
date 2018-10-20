@@ -23,3 +23,5 @@
 #include "sysutil.h"
 #include "ptrace.h"
 #include "sysctl.h"
+#include "signal.h"
+#include "reg.h"
